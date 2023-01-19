@@ -1,0 +1,169 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+
+--text-color: white;
+--bg-url:url(./Assets/mobiledark.jpg);
+--stroke-color:rgba(255, 255, 255, 0.5);
+--surface-color: rgba(255, 255, 255, 0.1);
+--surface-color-hover: rgba(0, 0, 0, 0.2);
+--hg-color: rgba(255, 255, 255, 0.2);
+--switch-bg: url(./Assets/moonstars.svg);
+}
+
+.L{
+
+    --text-color: black;
+    --bg-url:url(./Assets/mobilelight.jpg);   
+    --stroke-color: rgba(212, 209, 209, 0.5);
+    --surface-color: rgba(212, 209, 209, 0.5);
+    --surface-color-hover: rgba(255, 255, 255, 0.5);
+    --hg-color: rgba(0, 0, 0, 0.1);
+    --switch-bg: url(./Assets/sun.svg);
+}
+
+body{
+background-image: var(--bg-url);
+background-repeat: no-repeat;
+background-position: top center;
+background-size: cover;
+
+}
+body *{font-family: 'Inter', sans-serif;
+color: var(--text-color);
+}
+
+#c1{
+width: 360px;
+margin:56px auto 0px;
+padding: 0px 24px;
+}
+
+#profile {
+text-align: center;
+padding: 24px;
+}
+
+#profile img{
+width: 112px;
+}
+
+#profile p{
+
+font-weight: 500;
+line-height: 24px;
+margin-top: 8px;
+}
+#switch{ /*repare que assim como na imagem, está sendocodado o botão logao abaixo da foto */
+
+position: relative;
+width: 64px;
+margin: 4px auto;
+
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);/*serve para alinhar no eixo y, ou seja, o eixo VERTICAL */
+     
+}
+
+.L #switch button{
+    right: 0;
+    left: initial;
+}
+
+
+#switch span/*SPAN é INLINE, logo, não aceita algumas propriedades, uma delas, a largura*/{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    /* stroke-color-dark-mode */
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+
+
+}
+
+
+ul {
+list-style: none;/*para tirar as bolinhas que marcam a lista*/
+display: flex;
+flex-direction: column;
+gap: 16px; /* serve para ter espaço abaixo, 
+entre um botão/caixa e outra. usado SOMENTE com o flex */
+padding: 24px 0;
+}
+
+ul li a {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--surface-color);/*a cor do botão, nçao a do texto de dentro do botão*/
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;/*serve para retirar a linha de link do botão*/
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+/*hover é o pseudo-seletor/sudo-selector,
+é aqui que se aplica aqueles efeitinhos 
+diferentes quando se passa o mouse por cima*/
+li:hover {
+
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+     border-radius: 9px;
+      
+}
+
+#sociallinks{
+
+display: flex;
+justify-content: center;
+padding: 24px 0;
+font-size: 24px;
+}
+
+#sociallinks a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+#sociallinks a:hover{
+
+    background: var(--hg-color);
+    }
+
+    footer {
+
+        padding: 24px;
+        text-align: center;
+    }
