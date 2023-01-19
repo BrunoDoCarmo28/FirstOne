@@ -8,9 +8,9 @@ box-sizing: border-box;
 
 --text-color: white;
 --bg-url:url(./Assets/mobiledark.jpg);
---stroke-color:rgba(255, 255, 255, 0.5);
+--stroke-color: rgba(255, 255, 255, 0.5);
 --surface-color: rgba(255, 255, 255, 0.1);
---surface-color-hover: rgba(0, 0, 0, 0.2);
+--surface-color-hover: rgba(255, 255, 255, 0.05);
 --hg-color: rgba(255, 255, 255, 0.2);
 --switch-bg: url(./Assets/moonstars.svg);
 }
@@ -19,9 +19,9 @@ box-sizing: border-box;
 
     --text-color: black;
     --bg-url:url(./Assets/mobilelight.jpg);   
-    --stroke-color: rgba(212, 209, 209, 0.5);
-    --surface-color: rgba(212, 209, 209, 0.5);
-    --surface-color-hover: rgba(255, 255, 255, 0.5);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.05);
     --hg-color: rgba(0, 0, 0, 0.1);
     --switch-bg: url(./Assets/sun.svg);
 }
@@ -38,8 +38,8 @@ color: var(--text-color);
 }
 
 #c1{
-width: 360px;
-margin:56px auto 0px;
+width: 30%;
+margin: 56px auto 0px;
 padding: 0px 24px;
 }
 
@@ -77,13 +77,18 @@ margin: 4px auto;
     left: 0;
     z-index: 1;
     transform: translateY(-50%);/*serve para alinhar no eixo y, ou seja, o eixo VERTICAL */
-     
+    animation: slide-back 0.2s; 
 }
 
 .L #switch button{
     right: 0;
     left: initial;
+    animation: slide-in 0.2s forwards;
 }
+
+#switch button:hover {
+    outline: 8px solid var(--hg-color);
+  }
 
 
 #switch span/*SPAN é INLINE, logo, não aceita algumas propriedades, uma delas, a largura*/{
@@ -123,7 +128,7 @@ ul li a {
     -webkit-backdrop-filter: blur(4px);
     text-decoration: none;/*serve para retirar a linha de link do botão*/
     font-weight: 500;
-    transition: background 0.2s;
+    transition: background 0.5s;
 }
 
 /*hover é o pseudo-seletor/sudo-selector,
@@ -139,6 +144,8 @@ li:hover {
       
 }
 
+
+
 #sociallinks{
 
 display: flex;
@@ -153,7 +160,7 @@ font-size: 24px;
     align-items: center;
     justify-content: center;
     padding: 16px;
-    transition: background 0.2s;
+    transition: background 1s;
     border-radius: 50%;
 }
 
