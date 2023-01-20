@@ -7,13 +7,13 @@ const img = document.querySelector("#profile img")/*selecionao SELETOR TODO do c
 
 if (html.classList.contains('L')){
        /* html.classList.remove('L')*/
-        img.setAttribute('src', './assets/avatar.png');
+        img.setAttribute('src', 'Assets/avatar.png');
     
 
 } else {
 
 /*html.classList.add('L')*/
-img.setAttribute('src', './assets/avl.png')
+img.setAttribute('src', 'Assets/avl.png')
 
 }
 
