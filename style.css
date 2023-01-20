@@ -7,23 +7,23 @@ box-sizing: border-box;
 :root {
 
 --text-color: white;
---bg-url:url(./Assets/mobiledark.jpg);
+--bg-url:url(Assets/mobiledark.jpg);
 --stroke-color: rgba(255, 255, 255, 0.5);
 --surface-color: rgba(255, 255, 255, 0.1);
 --surface-color-hover: rgba(255, 255, 255, 0.05);
 --hg-color: rgba(255, 255, 255, 0.2);
---switch-bg: url(./Assets/moonstars.svg);
+--switch-bg: url(Assets/moonstars.svg);
 }
 
 .L{
 
     --text-color: black;
-    --bg-url:url(./Assets/mobilelight.jpg);   
+    --bg-url:url(Assets/mobilelight.jpg);   
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.05);
     --hg-color: rgba(0, 0, 0, 0.1);
-    --switch-bg: url(./Assets/sun.svg);
+    --switch-bg: url(Assets/sun.svg);
 }
 
 body{
@@ -180,12 +180,12 @@ font-size: 24px;
     @media (min-width: 700px){
 
         :root {
-            --bg-url: url(./Assets/desktopdark.jpg);
+            --bg-url: url(Assets/desktopdark.jpg);
 
         }
 
         .L {
-            --bg-url: url(./Assets/desktoplight.jpg);
+            --bg-url: url(Assets/desktoplight.jpg);
 
         }
 
